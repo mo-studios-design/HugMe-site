@@ -107,22 +107,34 @@ button:hover {
 
 .pixel-horn {
   position: absolute;
-  top: -28px;
-  width: 30px;
-  height: 38px;
-  background: #f2d39a;
-  border: 6px solid #4f4356;
-  border-radius: 12px 12px 4px 4px;
+  top: -32px;
+  width: 0;
+  height: 0;
+  border-left: 19px solid transparent;
+  border-right: 19px solid transparent;
+  border-bottom: 44px solid #f2d39a;
+}
+
+.pixel-horn::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: -11px;
+  width: 0;
+  height: 0;
+  border-left: 11px solid transparent;
+  border-right: 11px solid transparent;
+  border-bottom: 26px solid #ffe7b7;
 }
 
 .left-horn {
-  left: 34px;
-  transform: rotate(-18deg);
+  left: 30px;
+  transform: rotate(-12deg);
 }
 
 .right-horn {
-  right: 34px;
-  transform: rotate(18deg);
+  right: 30px;
+  transform: rotate(12deg);
 }
 
 .pixel-eye {
@@ -169,6 +181,25 @@ button:hover {
   transform: translateX(-50%);
   overflow: hidden;
   transition: 0.2s;
+}
+
+.pixel-mouth::before,
+.pixel-mouth::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 12px;
+  background: #ffffff;
+  z-index: 2;
+}
+
+.pixel-mouth::before {
+  left: 10px;
+}
+
+.pixel-mouth::after {
+  right: 10px;
 }
 
 .pixel-monster.eating .pixel-mouth {
