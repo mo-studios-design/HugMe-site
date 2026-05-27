@@ -20,18 +20,6 @@ body {
   z-index: 2;
 }
 
-.tag {
-  display: inline-block;
-  padding: 8px 14px;
-  border: 3px solid #5b4b59;
-  background: #fffaf7;
-  color: #9b7d8c;
-  font-size: 12px;
-  letter-spacing: 1px;
-  box-shadow: 4px 4px 0 #e5c7d1;
-  margin-bottom: 14px;
-}
-
 h1 {
   font-size: 50px;
   margin: 18px 0 14px;
@@ -94,24 +82,20 @@ button:hover {
 
 .monster-area {
   position: relative;
-  height: 240px;
-  margin-top: 38px;
-}
-
-.monster,
-.monster-img {
-  image-rendering: pixelated;
+  height: 250px;
+  margin-top: 42px;
 }
 
 .monster {
   position: relative;
-  width: 150px;
-  height: 135px;
+  width: 170px;
+  height: 145px;
   margin: 0 auto;
-  background: #cbb7ff;
+  background: #f8f1ff;
   border: 4px solid #5b4b59;
-  border-radius: 12px;
-  box-shadow: 8px 8px 0 #a98ee8;
+  border-radius: 18px;
+  box-shadow: 8px 8px 0 #c8a8f0;
+  image-rendering: pixelated;
   transition: 0.2s;
 }
 
@@ -119,72 +103,161 @@ button:hover {
   transform: scale(1.08);
 }
 
-.horn {
+.ear {
   position: absolute;
-  top: -22px;
-  width: 26px;
-  height: 32px;
-  background: #f7d7aa;
+  top: 26px;
+  width: 24px;
+  height: 38px;
+  background: #f8f1ff;
   border: 4px solid #5b4b59;
 }
 
-.horn.left {
-  left: 28px;
-  transform: rotate(-18deg);
+.left-ear {
+  left: -22px;
+  border-radius: 8px 0 0 8px;
 }
 
-.horn.right {
-  right: 28px;
-  transform: rotate(18deg);
+.right-ear {
+  right: -22px;
+  border-radius: 0 8px 8px 0;
+}
+
+.horn {
+  position: absolute;
+  top: -24px;
+  width: 28px;
+  height: 34px;
+  background: #ffe1a8;
+  border: 4px solid #5b4b59;
+}
+
+.left-horn {
+  left: 34px;
+  transform: rotate(-16deg);
+}
+
+.right-horn {
+  right: 34px;
+  transform: rotate(16deg);
+}
+
+.fur {
+  position: absolute;
+  background: #f8f1ff;
+  border: 4px solid #5b4b59;
+}
+
+.top-fur {
+  top: -12px;
+  left: 68px;
+  width: 26px;
+  height: 26px;
+  transform: rotate(45deg);
 }
 
 .eye {
   position: absolute;
-  top: 42px;
-  width: 16px;
-  height: 16px;
+  top: 46px;
+  width: 26px;
+  height: 26px;
   background: #2f2538;
+  border: 3px solid #5b4b59;
+}
+
+.eye span {
+  position: absolute;
+  top: 4px;
+  left: 5px;
+  width: 7px;
+  height: 7px;
+  background: #ffffff;
 }
 
 .left-eye {
-  left: 45px;
+  left: 42px;
 }
 
 .right-eye {
-  right: 45px;
+  right: 42px;
+}
+
+.cheek {
+  position: absolute;
+  top: 78px;
+  width: 18px;
+  height: 10px;
+  background: #ffc6d8;
+  border: 3px solid #5b4b59;
+}
+
+.left-cheek {
+  left: 28px;
+}
+
+.right-cheek {
+  right: 28px;
 }
 
 .mouth {
   position: absolute;
   left: 50%;
-  bottom: 35px;
-  width: 44px;
-  height: 22px;
+  bottom: 32px;
+  width: 50px;
+  height: 28px;
   background: #2f2538;
+  border: 4px solid #5b4b59;
   transform: translateX(-50%);
   transition: 0.2s;
+  overflow: hidden;
 }
 
 .monster.eating .mouth {
-  height: 38px;
-  width: 58px;
+  width: 66px;
+  height: 42px;
+}
+
+.tongue {
+  position: absolute;
+  left: 50%;
+  bottom: -2px;
+  width: 24px;
+  height: 14px;
+  background: #ff8fa8;
+  transform: translateX(-50%);
 }
 
 .arm {
   position: absolute;
-  top: 70px;
+  top: 78px;
   width: 34px;
-  height: 18px;
-  background: #cbb7ff;
+  height: 20px;
+  background: #f8f1ff;
   border: 4px solid #5b4b59;
 }
 
 .left-arm {
-  left: -24px;
+  left: -28px;
 }
 
 .right-arm {
-  right: -24px;
+  right: -28px;
+}
+
+.foot {
+  position: absolute;
+  bottom: -18px;
+  width: 34px;
+  height: 18px;
+  background: #f8f1ff;
+  border: 4px solid #5b4b59;
+}
+
+.left-foot {
+  left: 38px;
+}
+
+.right-foot {
+  right: 38px;
 }
 
 .paper-note {
@@ -265,8 +338,7 @@ button:hover {
 }
 
 .after-submit .input-card,
-.after-submit .subtitle,
-.after-submit .tag {
+.after-submit .subtitle {
   display: none;
 }
 
@@ -399,7 +471,7 @@ button:hover {
   }
 
   .monster-area {
-    height: 220px;
+    height: 235px;
   }
 
   .after-submit h1 {
