@@ -1,18 +1,36 @@
 <!DOCTYPE html>
 <html lang="zh-HK">
+
 <head>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
   <title>HugMe 抱抱站</title>
+
   <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
+  <div class="stars">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
   <main class="app">
 
     <section class="hero">
-      <p class="tag">emotional support creature</p>
+
+      <p class="tag">
+        emotional support creature
+      </p>
 
       <h1>HugMe 抱抱站</h1>
 
@@ -20,13 +38,15 @@
         有些情緒，<br>
         不一定能說給身邊的人聽。
       </p>
+
     </section>
 
     <section class="input-card">
 
       <textarea
         id="message"
-        placeholder="寫下今天讓你難過、委屈、焦慮，或無法說出口的事情……"></textarea>
+        placeholder="寫下今天讓你難過、委屈、焦慮，或無法說出口的事情……">
+      </textarea>
 
       <button onclick="eatEmotion()">
         交給小怪獸
@@ -36,23 +56,36 @@
 
     <section class="monster-area">
 
-      <div id="paperNote" class="paper-note hidden">
+      <div id="paperNote"
+           class="paper-note hidden">
+
         情緒小紙條
+
       </div>
 
-      <div id="monster" class="monster">
+      <div id="monster"
+           class="monster">
+
         <div class="horn left"></div>
+
         <div class="horn right"></div>
+
         <div class="eye left-eye"></div>
+
         <div class="eye right-eye"></div>
+
         <div class="mouth"></div>
+
         <div class="arm left-arm"></div>
+
         <div class="arm right-arm"></div>
+
       </div>
 
     </section>
 
-    <section id="result" class="result-card hidden">
+    <section id="result"
+             class="result-card hidden">
 
       <p class="eat-text">
         小怪獸已經幫你吃掉這份情緒了。
@@ -68,8 +101,11 @@
 
       <p id="comfortText"></p>
 
-      <button class="again-btn" onclick="writeAgain()">
+      <button class="again-btn"
+              onclick="writeAgain()">
+
         再寫一條
+
       </button>
 
     </section>
